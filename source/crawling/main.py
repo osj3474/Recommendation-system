@@ -9,7 +9,8 @@ def findData(user_id):
     review_lst = extract_reviews(url)
 
     df = pd.DataFrame(review_lst)
-    df.to_csv("review_{}.csv".format(user_id), mode='w', encoding='ms949')
+    df.to_csv("../../data/review_{}.csv".format(user_id),
+              mode='w', encoding='ms949')
 
 
 users_id = findSeveralUsers(28566)
