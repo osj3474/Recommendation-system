@@ -4,7 +4,7 @@ from myre import findTarget
 
 
 def findSeveralUsers(place_id):
-    url = f"https://www.siksinhot.com/P/{place_id}"
+    url = f"https://www.siksinhot.com{place_id}"
 
     place_result = requests.get(url)
     place_soup = bs(place_result.text, "html.parser")
