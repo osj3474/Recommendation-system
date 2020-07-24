@@ -18,5 +18,6 @@ repeat{
   B <- check_df(list_df_data,i)
   colnames(B) <- c("title", i)
   merge_df <- merge(x=merge_df, y=B, by='title', all=TRUE)
-  i <- i+2
+  i <- i+1
 }
+
