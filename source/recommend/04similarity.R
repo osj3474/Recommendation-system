@@ -9,6 +9,10 @@ pearsonCor <- function(x, y){
   sqrt( sum( (x_new - x_mean)**2) * sum( (y_new-y_mean) **2) )
 }
 
+u_dist<-function(u, v){
+  sqrt(sum((u -v) **2))
+}
+
 m <- matrix(sample(c(as.numeric(0:5), NA), 50,
                    replace=TRUE, prob=c(rep(.4/6,6),.6)), ncol=10,
             dimnames=list(user=paste("u", 1:5, sep=""),

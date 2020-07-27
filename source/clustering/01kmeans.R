@@ -1,12 +1,12 @@
-# k-means, Centroid-based clustering
 
 library(ggplot2)
 library(tidyr)
 library(dplyr)
 
-set.seed(2018)
-synth.data <- data.frame(x1 =c(rnorm(20, 3, 1.5), rnorm(20,0,1), rnorm(20,5,1)), 
+# set.seed(2018)
+synth.data <- data.frame(x1 =c(rnorm(20, 3, 1), rnorm(20,0,1), rnorm(20,5,1)), 
                          x2 =c(rnorm(20, 0, 1), rnorm(20,4,1), rnorm(20,5,1)))
+synth.data
 ndata <- nrow(synth.data)
 ndim <- ncol(synth.data)
 
