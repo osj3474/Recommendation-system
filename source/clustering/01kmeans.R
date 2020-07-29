@@ -3,7 +3,7 @@ library(ggplot2)
 library(tidyr)
 library(dplyr)
 
-# set.seed(2018)
+set.seed(2018)
 synth.data <- data.frame(x1 =c(rnorm(20, 3, 1), rnorm(20,0,1), rnorm(20,5,1)), 
                          x2 =c(rnorm(20, 0, 1), rnorm(20,4,1), rnorm(20,5,1)))
 synth.data
@@ -24,10 +24,10 @@ cents <-data.frame(cl =1:k)
 cents <-cbind(cents, synth.data[sample(1:60, k),])
 
 synth.data$cl <- factor(rep(1, ndata), levels =1:k)
-synth.data %>% ggplot(aes(x =x1, y=x2, col =as.factor(cl))) +
+synth.data %>% ggplot(aes(x =x1, y=x2)) +
   geom_point(shape =1) +
-  theme_bw() +
-  geom_point(data =cents, shape =4, col ='red')
+  theme_bw()# +
+  #geom_point(data =cents, shape =4, col ='red')
 
 
 ############################ Questions ###############################
