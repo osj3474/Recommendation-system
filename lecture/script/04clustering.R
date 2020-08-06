@@ -11,17 +11,17 @@ clusterKmeans$center
 # hungry_eun_tae (kmeans)  
 # df <- read.csv("hungry_eun_tae.csv")
 df <- fread("hungry_eun_tae.csv", sep=',', encoding='UTF-8')
-# View(df)
-# df_t <- t(df)
-# df_t <- df_t[-1,]
-# View(df_t)
-# colnames(df_t) <- paste("i", 1:ncol(df_t), sep='')
-# 
-# df_t <- as.data.frame(df_t)
-# str(df_t)
-# df_t[,c(1:ncol(df_t))] <- as.double(unlist(df_t[,c(1:ncol(df_t))]))
-# clusterKmeans <- kmeans(df_t, centers = 3, iter.max = 100)
-# clusterKmeans$cluster
+View(df)
+df_t <- t(df)
+df_t <- df_t[-1,]
+View(df_t)
+colnames(df_t) <- paste("i", 1:ncol(df_t), sep='')
+
+df_t <- as.data.frame(df_t)
+str(df_t)
+df_t[,c(1:ncol(df_t))] <- as.double(unlist(df_t[,c(1:ncol(df_t))]))
+clusterKmeans <- kmeans(df_t, centers = 3, iter.max = 100)
+clusterKmeans$cluster
 
 
 ### Hierarchical clustering

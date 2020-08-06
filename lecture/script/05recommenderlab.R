@@ -71,8 +71,6 @@ colnames(df_t) <- paste("i", 1:ncol(df_t), sep='')
 rownames(df_t) <- paste("u", 1:nrow(df_t), sep='')
 
 df_t <- as.data.frame(df_t)
-df_t[,c(1:ncol(df_t))] <- as.double(unlist(df_t[,c(1:ncol(df_t))]))
-
 df_t[which(df_t == 0, arr.ind = TRUE)] <- NA
 
 user_item_ratings <- as.matrix(df_t)
